@@ -1,14 +1,14 @@
 <!-- Unit 7 Project
 Requirements
-[  ] three variables
-[  ] animation that moves position
-[  ] animation that changes size
-[  ] three new HTML elements/CSS Declarations
+[ yes ] three variables
+[ yes ] animation that moves position
+[ yes ] animation that changes size
+[ yes ] three new HTML elements/CSS Declarations
 
 Select ONE Additional 
 [ no ] Feature 1 - Use an Incrementing Shortcut 
 [ no ] Feature 2 - Move Object with Mouse
-[ no ] Feature 3 - Repeat Animation
+[ yes! ] Feature 3 - Repeat Animation
 [ no ] Feature 4 - Text on the Canvas
 [ no ] Feature 5 - Animate a color change
 -->
@@ -22,21 +22,54 @@ Select ONE Additional
     <title>Unit 7 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
-    <style></style>
+    <style>
+    
+      #year {   font-family:italic;
+        color:red;
+        background-color:black
+        
+      }
+   
+      #goals {
+        font-family: italic;
+        color:orange;
+        background-color: black
+        
+        
+      }
+      #list  {
+        
+        
+        font-family:italic;
+        
+        color:yellow;
+        background-color:black;
+      }
+    
+      
+      
+    
+    </style>
   </head>
 
   <body>
-    <h1>
-      New Year, New Me
+    <h1 id="year">
+    IT'S 2025 CHAT!!
     </h1>
     <div class="main">
       <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
       <div>
-        <h2>
-          2025 Goals
+        <h2 id="goals">
+          New Year Goals
         </h2>
-        <ol>
-          <li>Spend More Time Coding </li>
+        <ol id="list">
+          <li>Not cave into senioritis (too much) </li>
+          <li>Work on my mental health and way I respond to situations</li>
+          <li>GROW MY HAIR</li>
+         <li>Get a job</li>
+          <li>Get into my dream college PLS PLS PLS</li>
+          <li>Somehow make six figures and become rich</li>
+          <li>Have fun with my friends and stop getting involved in drama</li>
         </ol>
       </div>
     </div>
