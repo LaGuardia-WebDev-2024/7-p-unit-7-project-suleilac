@@ -4,7 +4,9 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var fireworkX = 20;
+var planeX = 20;
+var hotairY= 300;
+var fireSize= -1000;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -17,9 +19,55 @@ draw = function(){
   }
   
   //🎯Animation Code Goes Here
-  rect(fireworkX, 15, 10, 10);
+ //base 
+ fill(214, 210, 210)
+ ellipse(planeX, 150, 50, 20);
   
-  fireworkX = fireworkX + 1;
+  //wing
+
+  ellipse(planeX,160,30,10)
+
+  
+  
+ //circles
+fill(255, 255, 255)
+ ellipse(planeX+8,160,5,5);
+  ellipse(planeX,160,5,5);
+    ellipse(planeX-8,160,5,5)
+  
+ planeX = planeX + 1;
+hotairY= hotairY -1;
+fireSize= fireSize+7
+
+//hot air ballon 
+fill(247, 10, 10)
+
+ellipse(200,hotairY,50,50)
+
+//basket
+fill(110, 72, 44)
+rect(195,hotairY+30,10,10)
+
+//lines
+line(196,hotairY+30,187,hotairY+21)
+line(205,hotairY+30,214,hotairY+21)
+
+
+//fire explosion 
+fill(179, 45, 0)
+ellipse(200,150,fireSize,fireSize)
+fill(219, 101, 33)
+ellipse(200,150,fireSize,fireSize-100);
+
+if(fireSize>900)
+{
+planeX = 20;
+hotairY= 300;
+ fireSize= -1000;
+
+}
+
+
 
 }
 
